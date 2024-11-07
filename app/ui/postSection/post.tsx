@@ -8,17 +8,15 @@ type PostPropsType = {
 };
 export function Post({ title, date, tags, content }: PostPropsType) {
   return (
-    <div
-      className={`${heebo.className} bg-white flex flex-col gap-y-5 px-8 py-10  max-w-[483px] `}
-    >
-      <h3 className="font-bold sm:text-[26px] text-xl ">{title}</h3>
-      <p className="text-black/70 sm:text-lg">
+    <div className={`${heebo.className} post-card`}>
+      <h3 className="post-card-heading">{title}</h3>
+      <p className="post-card-date">
         <span>
           {date} {" | "}
         </span>
         <span>{tags}</span>
       </p>
-      <p className="py-4 sm:text-base text-sm text-[#21243D]">{content}</p>
+      <p className="post-card-content">{content}</p>
     </div>
   );
 }

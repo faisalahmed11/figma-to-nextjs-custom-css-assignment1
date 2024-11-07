@@ -183,3 +183,110 @@ body {
     letter-spacing: 2px; /* Equivalent to md:tracking-[2px] */
   }
 }
+
+/*1 Posts Section  */
+/* Section background and padding */
+.section-recent-posts {
+  background-color: #f4e2e2;
+  padding-top: 1rem; /* Equivalent to py-4 */
+  padding-bottom: 1rem;
+}
+
+/* Container for the content */
+.recent-posts-container {
+  max-width: 483px;
+  margin: 0 auto;
+  padding: 1rem; /* Equivalent to p-4 */
+}
+
+/* Header section for the title and button */
+.recent-posts-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500; /* Equivalent to font-medium */
+  padding-top: 1rem; /* Equivalent to py-4 */
+  padding-bottom: 1rem;
+}
+
+.recent-posts-header h2 {
+  font-size: 22px;
+}
+
+.recent-posts-header button {
+  color: #f98585;
+  text-decoration: none; /* Remove underline */
+}
+
+.recent-posts-header button:hover {
+  text-decoration: underline;
+}
+
+/* Grid container for the posts */
+.recent-posts-grid {
+  display: grid;
+  gap: 2rem; /* Equivalent to gap-8 */
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+/* 1 md breakpoint */
+@media (min-width: 768px) {
+  /* md breakpoint */
+  .section-recent-posts {
+    padding-top: 2rem; /* Equivalent to md:py-8 */
+    padding-bottom: 2rem;
+  }
+  .recent-posts-container {
+    max-width: 1030px; /* Equivalent to md:max-w-[1030px] */
+  }
+  .recent-posts-grid {
+    grid-template-columns: repeat(2, 1fr); /* Equivalent to md:grid-cols-2 */
+  }
+}
+
+/*1 Post Card */
+/* Main post card container */
+.post-card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Equivalent to gap-y-5 */
+  padding: 2.5rem 2rem; /* Equivalent to px-8 py-10 */
+  max-width: 483px;
+}
+
+/* Heading styling */
+.post-card-heading {
+  font-weight: bold;
+  font-size: 1.25rem; /* Default text-xl */
+}
+
+/* Date and tags styling */
+.post-card-date {
+  color: rgba(0, 0, 0, 0.7); /* Equivalent to text-black/70 */
+  font-size: 1rem;
+}
+
+/* Content paragraph styling */
+.post-card-content {
+  padding-top: 1rem; /* Equivalent to py-4 */
+  padding-bottom: 1rem;
+  color: #21243d;
+  font-size: 0.875rem;
+}
+
+/*1 Combined media query for sm (640px) */
+@media (min-width: 640px) {
+  .post-card-heading {
+    font-size: 26px; /* Equivalent to sm:text-[26px] */
+  }
+
+  .post-card-date {
+    font-size: 1.125rem; /* Equivalent to sm:text-lg */
+  }
+
+  .post-card-content {
+    font-size: 1rem; /* Equivalent to sm:text-base */
+  }
+}
