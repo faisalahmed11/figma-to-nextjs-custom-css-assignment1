@@ -9,23 +9,23 @@ import {
 
 export function Footer() {
   return (
-    <footer className="text-center space-y-2 ">
-      <nav className="flex gap-8 justify-center">
+    <footer className="footer">
+      <nav className="footer-nav">
         <Link href={"/"}>
-          <FaFacebookSquare className="sm:text-3xl text-xl" />
+          <FaFacebookSquare className="footer-nav-icon" />
         </Link>
         <Link href={"/"}>
-          <FaInstagram className="sm:text-3xl text-xl" />
+          <FaInstagram className="footer-nav-icon" />
         </Link>
         <Link href={"/"}>
-          <FaTwitter className="sm:text-3xl text-xl" />
+          <FaTwitter className="footer-nav-icon" />
         </Link>
         <Link href={"/"}>
-          <FaLinkedin className="sm:text-3xl text-xl" />
+          <FaLinkedin className="footer-nav-icon" />
         </Link>
       </nav>
-      <p className={`${heebo.className} font-medium sm:text-[22px] text-lg`}>
-        Copyright ©2020 All rights reserved{" "}
+      <p className={`${heebo.className} footer-text`}>
+        Copyright ©2020 All rights reserved
       </p>
     </footer>
   );

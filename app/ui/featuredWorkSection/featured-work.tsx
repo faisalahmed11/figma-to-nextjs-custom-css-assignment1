@@ -17,10 +17,8 @@ export function FeaturedWork({
   description,
 }: FeaturedWorkPropsType) {
   return (
-    <div
-      className={` ${heebo.className} flex sm:flex-row flex-col items-center gap-4  `}
-    >
-      <div className="relative   w-full sm:w-[400px] aspect-[11/8] ">
+    <div className={`${heebo.className} feature-card`}>
+      <div className="feature-card-image">
         <Image
           alt="feature work image"
           fill
@@ -28,16 +26,13 @@ export function FeaturedWork({
           className="object-cover rounded-2xl"
         />
       </div>
-      <div className="flex flex-col justify-between gap-4  sm:self-stretch ">
-        <h3 className="font-bold sm:text-[30px] text-2xl">{title}</h3>
+      <div className="feature-card-content">
+        <h3 className="feature-card-title">{title}</h3>
         <p className="space-x-2">
-          <span className="text-white font-bold bg-[#F98585] px-2 py-[1px] rounded-xl">
-            {year}
-          </span>
-
-          <span className="text-xl text-black/60 ">{type}</span>
+          <span className="feature-card-year">{year}</span>
+          <span className="feature-card-type">{type}</span>
         </p>
-        <p className="text-lg font-light">{description}</p>
+        <p className="feature-card-description">{description}</p>
       </div>
     </div>
   );

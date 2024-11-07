@@ -3,12 +3,12 @@ import { FeaturedWork } from "./featured-work";
 
 export function FeaturedWorkSection() {
   return (
-    <section>
-      <div className="max-w-[1030px] mx-auto p-4 py-8">
-        <h2 className={`${heebo.className} sm:text-[22px] font-medium`}>
+    <section className="featured-works-section">
+      <div className="featured-works-container">
+        <h2 className={`${heebo.className} featured-works-title`}>
           Featured Works
         </h2>
-        <div className="space-y-8 py-4">
+        <div className="featured-works-container">
           <FeaturedWork
             title="Designing Dashboards"
             type="Dashboard"

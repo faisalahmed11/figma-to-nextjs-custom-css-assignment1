@@ -12,6 +12,31 @@ body {
   overflow-y: scroll;
 }
 
+/*1 Body as a Container */
+/* Body container */
+.body-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: hsla(0, 30%, 73%, 0.11);
+  /* background-opacity: 0.11; Equivalent to bg-opacity-[11%] */
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif; /* Equivalent to antialiased font */
+}
+
+/* Padding for smaller screens */
+.body-container-sm-padding {
+  padding-top: 1rem; /* Equivalent to pt-4 */
+}
+
+/*1 Padding for larger screens (sm breakpoint) */
+@media (min-width: 640px) {
+  /* sm breakpoint */
+  .body-container-sm-padding {
+    padding-top: 4.1875rem; /* Equivalent to sm:pt-[67px] */
+  }
+}
+
 /*1 Navbar styles */
 
 .nav-container {
@@ -288,5 +313,154 @@ body {
 
   .post-card-content {
     font-size: 1rem; /* Equivalent to sm:text-base */
+  }
+}
+
+/*1 Featured work section */
+
+/* Section container */
+.featured-works-section {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 1rem; /* Equivalent to p-4 */
+  padding-top: 2rem; /* Equivalent to py-8 */
+  padding-bottom: 2rem;
+}
+
+/* Title styling */
+.featured-works-title {
+  font-family: "Heebo", sans-serif;
+  font-weight: 500; /* Equivalent to font-medium */
+  font-size: 1.375rem; /* Equivalent to sm:text-[22px] */
+}
+
+/* Featured Works container */
+.featured-works-container {
+  padding-top: 1rem; /* Equivalent to py-4 */
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Equivalent to space-y-8 */
+}
+
+/* Media Query for screen sizes 640px and larger */
+@media (min-width: 640px) {
+  /* sm breakpoint */
+  .featured-works-title {
+    font-size: 1.375rem; /* Equivalent to sm:text-[22px] */
+  }
+
+  .featured-works-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/*1 Featured Work Component */
+/* Main container for the flex layout */
+.feature-card {
+  display: flex;
+  flex-direction: column; /* Default to column layout */
+  align-items: center;
+  gap: 1rem; /* Equivalent to gap-4 */
+}
+
+/* Image container */
+.feature-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 11 / 8; /* Equivalent to aspect-[11/8] */
+}
+
+.feature-card-image img {
+  object-fit: cover;
+  border-radius: 1rem; /* Equivalent to rounded-2xl */
+}
+
+/* Content section */
+.feature-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem; /* Equivalent to gap-4 */
+}
+
+/* Title styling */
+.feature-card-title {
+  font-weight: bold;
+  font-size: 1.5rem; /* Equivalent to text-2xl */
+}
+
+@media (min-width: 640px) {
+  /* sm breakpoint */
+  .feature-card {
+    flex-direction: row; /* Switch to row layout on small screens */
+  }
+
+  .feature-card-image {
+    width: 400px; /* Equivalent to sm:w-[400px] */
+  }
+
+  .feature-card-title {
+    font-size: 1.875rem; /* Equivalent to sm:text-[30px] */
+  }
+}
+
+/* Year badge */
+.feature-card-year {
+  background-color: #f98585;
+  color: white;
+  font-weight: bold;
+  padding: 0.125rem 0.5rem; /* Equivalent to px-2 py-[1px] */
+  border-radius: 1rem; /* Equivalent to rounded-xl */
+}
+
+/* Type text */
+.feature-card-type {
+  font-size: 1.125rem; /* Equivalent to text-xl */
+  color: rgba(0, 0, 0, 0.6); /* Equivalent to text-black/60 */
+}
+
+/* Description text */
+.feature-card-description {
+  font-size: 1.125rem; /* Equivalent to text-lg */
+  font-weight: 300; /* Equivalent to font-light */
+}
+
+/*1 footer section */
+
+/* Footer container */
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Navigation section for social links */
+.footer-nav {
+  display: flex;
+  gap: 2rem; /* Equivalent to gap-8 */
+  justify-content: center;
+  margin-bottom: 1rem; /* Equivalent to space-y-2 */
+}
+
+/* Social media icons */
+.footer-nav a {
+  font-size: 1.25rem; /* Equivalent to text-xl */
+}
+
+/* Footer copyright text */
+.footer-text {
+  font-family: "Heebo", sans-serif;
+  font-weight: 500; /* Equivalent to font-medium */
+  font-size: 1.125rem; /* Equivalent to text-lg */
+}
+
+@media (min-width: 640px) {
+  /* sm breakpoint */
+  .footer-text {
+    font-size: 1.375rem; /* Equivalent to sm:text-[22px] */
+  }
+  .footer-nav a {
+    font-size: 1.875rem; /* Equivalent to sm:text-3xl */
   }
 }
