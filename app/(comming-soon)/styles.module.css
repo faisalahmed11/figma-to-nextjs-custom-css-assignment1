@@ -1,0 +1,24 @@
+.centerContainer {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 1.25rem; /* Equivalent to text-xl */
+  font-weight: bold; /* Equivalent to font-bold */
+  text-align: center; /* Equivalent to text-center */
+  line-height: 1.75rem; /* Matches text-xl */
+}
+
+.backLink {
+  text-decoration: underline; /* Equivalent to hover:underline */
+  color: #1e3a8a; /* Equivalent to hover:text-blue-900 */
+  transition: color 0.3s ease;
+}
+
+.backLink:hover {
+  color: #1e40af; /* Darker blue on hover */
+}
