@@ -2,20 +2,184 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html,
+body {
+  min-height: 99dvh;
+  /* background: red; */
+}
+/*  improving page layout when scrollbar shows up*/
+body {
+  overflow-y: scroll;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/*1 Navbar styles */
+
+.nav-container {
+  max-width: 283px; /* Equivalent to md:max-w-[283px] */
+  margin-left: auto; /* Equivalent to md:ml-auto */
+  display: flex;
+  justify-content: space-evenly; /* Default to justify-evenly */
+  gap: 2rem; /* Equivalent to gap-8 */
+  margin-right: 70px; /* Equivalent to md:mr-[70px] */
+  font-weight: 500; /* Equivalent to font-medium */
+  font-size: 1.25rem; /* Default to sm:text-xl */
+}
+
+/*2 navbar link styles */
+.navbar-link {
+  transition-property: color, border-color; /* Equivalent to transition-colors */
+  transition-duration: 150ms; /* Tailwind's default transition duration */
+  border-bottom-width: 2px; /* Equivalent to border-b-2 */
+  border-color: transparent; /* Equivalent to border-transparent */
+  font-weight: 500; /* Equivalent to font-medium */
+}
+/*2 Hover state for changing border color */
+.navbar-link:hover {
+  border-color: rgba(0, 0, 0, 0.5); /* Equivalent to hover:border-black/50 */
+}
+
+/*2 Active or conditional border color */
+.navbar-link.active {
+  border-color: rgba(0, 0, 0, 0.5); /* Equivalent to border-black/50 */
+}
+
+/*1 Media query for md breakpoint */
+@media (min-width: 768px) {
+  .nav-container {
+    justify-content: space-between; /* Equivalent to md:justify-between */
+    font-size: inherit; /* Revert to base font-size on larger screens */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/*1 Hero Section Styles */
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1030px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  padding-top: 2rem; /* Equivalent to py-8 */
+  padding-bottom: 2rem;
+  padding-left: 1rem; /* Equivalent to p-4 */
+  padding-right: 1rem;
+}
+
+/*2 Styling for image container */
+.hero-image-container {
+  position: relative;
+  width: 160px;
+  aspect-ratio: 1; /* Equivalent to aspect-square */
+}
+
+/*2 Background overlay for image */
+.hero-bg-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #aa9f9f;
+  opacity: 0.31; /* Equivalent to bg-opacity-[31%] */
+  border-radius: 50%; /* Equivalent to rounded-full */
+  top: 0.5rem; /* right-2, top-2 */
+  right: 0.5rem;
+}
+
+/*2 hero-profile-image */
+.hero-profile-image {
+  position: relative;
+  z-index: 10;
+}
+
+/*2 Text container */
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem; /* Equivalent to gap-y-4 */
+  padding-top: 1.25rem; /* Equivalent to pt-5 */
+}
+
+/*2 Heading styling */
+.hero-heading {
+  font-weight: 900; /* Equivalent to font-black */
+  font-size: 1.5rem; /* Equivalent to text-2xl */
+  color: #21243d;
+
+  line-height: 1.25;
+}
+
+/*2 Paragraph styling */
+.hero-paragraph {
+  font-size: 1rem;
+  color: #21243d;
+}
+
+/*2 Button styling */
+.hero-button {
+  font-weight: 500; /* Equivalent to font-medium */
+  font-size: 1.125rem; /* Equivalent to text-lg */
+  color: white;
+  background-color: #f98585;
+  width: 205px; /* Equivalent to w-[205px] */
+  height: 50px; /* Equivalent to h-[50px] */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Equivalent to shadow-md shadow-black/30 */
+  transition: background-color 0.3s;
+  transform: scale(0.9); /* Equivalent to scale-90 */
+}
+
+.hero-button:hover {
+  background-color: rgba(
+    249,
+    133,
+    133,
+    0.8
+  ); /* Equivalent to hover:bg-opacity-80 */
+}
+
+/*1 sm breakpoint */
+@media (min-width: 640px) {
+  .hero-image-container {
+    width: 298px; /* Equivalent to sm:w-[298px] */
+  }
+
+  .hero-text-container {
+    gap: 1.875rem; /* Equivalent to sm:gap-y-[30px] */
+  }
+
+  .hero-heading {
+    font-size: 1.875rem; /* Equivalent to sm:text-3xl */
+  }
+
+  .hero-button {
+    transform: scale(1); /* Equivalent to sm:scale-100 */
+  }
+}
+
+/*1 md breakpoint */
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+    padding-top: 8rem; /* Equivalent to md:pt-32 */
+    padding-bottom: 4rem; /* Equivalent to md:py-16 */
+  }
+
+  .hero-image-container {
+    order: 2; /* Equivalent to md:order-2 */
+  }
+
+  .hero-text-container {
+    align-items: flex-start;
+    text-align: left;
+    max-width: 531px; /* Equivalent to md:max-w-[531px] */
+    padding-top: 0;
+  }
+
+  .hero-heading {
+    font-size: 3rem; /* Equivalent to md:text-5xl */
+    line-height: 61px;
+    letter-spacing: 2px; /* Equivalent to md:tracking-[2px] */
+  }
 }
